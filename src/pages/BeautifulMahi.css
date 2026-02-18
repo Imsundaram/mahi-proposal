@@ -1,0 +1,123 @@
+.beautiful-container {
+    min-height: 100vh;
+    width: 100vw;
+    background: black;
+    color: white;
+    padding: 4rem 1rem;
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 6rem;
+}
+
+.instruction-box {
+    margin-top: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.instruction-box code {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    color: #00ffcc;
+    font-family: monospace;
+    font-size: 1.1rem;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    width: 280px;
+    height: 350px;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.photo-item:hover .img-container img {
+    transform: scale(1.1);
+}
+
+.photo-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    text-align: center;
+    z-index: 2;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+}
+
+.photo-item:hover .photo-text {
+    transform: translateY(0);
+}
+
+.glow .img-container img {
+    filter: saturate(1.2) brightness(1.1);
+    box-shadow: 0 0 25px var(--pink);
+}
+
+.bnw-cinematic .img-container img {
+    filter: grayscale(100%) contrast(1.2);
+}
+
+.heart-particles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 3;
+}

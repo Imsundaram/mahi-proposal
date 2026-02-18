@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.funny-story-container {
+    min-height: 100vh;
+    width: 100vw;
+    background: black;
+    color: #33ff33;
+    /* Typical terminal green or retro game style */
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.game-ui {
+    border: 4px solid #33ff33;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 20px #33ff33, inset 0 0 20px #33ff33;
+}
+
+.pixel-title {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: var(--pink);
+    text-shadow: 2px 2px 0 var(--white);
+}
+
+.level-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.photo-frame {
+    width: 200px;
+    height: 200px;
+    border: 4px dashed var(--pink);
+    padding: 5px;
+    background: #222;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(0.5);
+    /* Retro feel */
+}
+
+.game-text {
+    line-height: 2;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.game-btn {
+    background: #33ff33;
+    color: black;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--pink);
+    transition: transform 0.1s;
+}
+
+.game-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--pink);
+}
+
+.achievement-unlocked {
+    border: 2px solid gold;
+    padding: 1rem;
+    margin: 1rem;
+    background: rgba(255, 215, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: gold;
+}
